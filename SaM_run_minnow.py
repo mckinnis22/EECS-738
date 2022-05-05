@@ -15,7 +15,7 @@ from spinup.utils.mpi_tools import mpi_fork, mpi_avg, proc_id, mpi_statistics_sc
 
 
 model_path = '/home/jef/spinningup/spinup/Results/pyt_save/'
-model_name = 'TryCatchingThisOneMotherFucker.pt'
+model_name = 'Minnow.pt'
 
 env = gym.make('SaM-minnow-v0')
 
@@ -26,9 +26,6 @@ seed += 10000 * proc_id()
 torch.manual_seed(seed)
 np.random.seed(seed)
 
-#Here is what is going on. The dqn.py is made like the spinningup algorithms in that its stupid simple to
-#run with normal examples. However, as soon as issues arose with the custom environment, Mozammal told me
-#to break up their code line by line to make debugging a possibility.
 
 #DQN setup
 dqnetwork=DQN
